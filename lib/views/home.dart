@@ -32,11 +32,11 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton.extended(
           backgroundColor: kPrimaryColor,
           onPressed: () {},
-          label: Text(
+          label: const Text(
             "Create",
             style: TextStyle(color: Colors.white),
           ),
-          icon: Icon(
+          icon: const Icon(
             Icons.add,
             color: Colors.white,
           ),
@@ -66,25 +66,25 @@ class _HomePageState extends State<HomePage> {
             children: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(CupertinoIcons.quote_bubble_fill),
+                icon: const Icon(CupertinoIcons.quote_bubble_fill),
                 iconSize: 28,
                 tooltip: "Q&A",
               ),
               const SizedBox(
-                width: 15,
+                width: 17,
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(CupertinoIcons.search),
+                icon: const Icon(CupertinoIcons.search),
                 iconSize: 28,
                 tooltip: "Feeds",
               ),
               const SizedBox(
-                width: 15,
+                width: 17,
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(CupertinoIcons.person),
+                icon: const Icon(CupertinoIcons.person),
                 iconSize: 28,
                 tooltip: "Profile",
               ),
@@ -194,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                           left: 20,
                           right: 20,
                         ),
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 20,
                           vertical: 22,
                         ),
@@ -208,7 +208,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
+                              children: const [
                                 Text(
                                   "Politics",
                                   style: TextStyle(
@@ -228,7 +228,7 @@ class _HomePageState extends State<HomePage> {
                             const SizedBox(
                               height: 12,
                             ),
-                            Text(
+                            const Text(
                               "Healthy Lifestyles",
                               style: TextStyle(
                                 fontSize: 20,
@@ -237,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                             const SizedBox(
                               height: 7,
                             ),
-                            Text(
+                            const Text(
                               "What a bug track! A great way to start your journey by discussing with the experienced mentors",
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
@@ -259,7 +259,7 @@ class _HomePageState extends State<HomePage> {
                                     width: 28,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           color:
                                               Color.fromARGB(255, 43, 43, 43),
@@ -280,7 +280,7 @@ class _HomePageState extends State<HomePage> {
                                 const SizedBox(
                                   width: 8,
                                 ),
-                                Text(
+                                const Text(
                                   "Pratik JH",
                                   style: TextStyle(
                                     color: Colors.white70,
@@ -291,7 +291,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             Container(
                               height: 0.13,
-                              margin: EdgeInsets.symmetric(
+                              margin: const EdgeInsets.symmetric(
                                 horizontal: 20,
                                 vertical: 15,
                               ),
@@ -315,7 +315,7 @@ class _HomePageState extends State<HomePage> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10),
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               color: Color.fromARGB(
                                                   255, 43, 43, 43),
@@ -343,7 +343,7 @@ class _HomePageState extends State<HomePage> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10),
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               color: Color.fromARGB(
                                                   255, 43, 43, 43),
@@ -371,7 +371,7 @@ class _HomePageState extends State<HomePage> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10),
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               color: Color.fromARGB(
                                                   255, 43, 43, 43),
@@ -391,8 +391,8 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Container(
-                                      margin: EdgeInsets.only(left: 85),
-                                      child: Text(
+                                      margin: const EdgeInsets.only(left: 85),
+                                      child: const Text(
                                         "112 Visitors",
                                         style: TextStyle(
                                           color: Colors.grey,
@@ -404,7 +404,7 @@ class _HomePageState extends State<HomePage> {
                                   ],
                                 ),
                                 Container(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                     horizontal: 12,
                                     vertical: 7,
                                   ),
@@ -419,8 +419,8 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         height: 8,
                                         width: 8,
-                                        margin: EdgeInsets.only(right: 7),
-                                        decoration: BoxDecoration(
+                                        margin: const EdgeInsets.only(right: 7),
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: kDarkColor,
                                         ),
@@ -428,8 +428,8 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         height: 8,
                                         width: 8,
-                                        margin: EdgeInsets.only(right: 7),
-                                        decoration: BoxDecoration(
+                                        margin: const EdgeInsets.only(right: 7),
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: Colors.amber,
                                         ),
@@ -437,7 +437,7 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         height: 8,
                                         width: 8,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: kDarkColor,
                                         ),
