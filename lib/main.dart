@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:squadapp/views/chat_page.dart';
 import 'package:squadapp/views/home.dart';
 import 'package:squadapp/widgets/constants.dart';
 
@@ -19,6 +20,11 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
       ),
       home: const HomePage(),
+      initialRoute: HomePage.id,
+      routes: {
+        HomePage.id: (_) => const HomePage(),
+        ChatPage.id: (_) => ChatPage(),
+      },
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:squadapp/views/chat_page.dart';
 import 'package:squadapp/widgets/constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,6 +31,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
         floatingActionButton: FloatingActionButton.extended(
+          tooltip: "Create",
           backgroundColor: kPrimaryColor,
           onPressed: () {},
           label: const Text(
@@ -102,14 +104,14 @@ class _HomePageState extends State<HomePage> {
             //   child: Text(
             //     "Squad",
             //     style: TextStyle(
-            //       fontSize: 18,
+            //       fontSize: 20,
             //       fontWeight: FontWeight.bold,
             //       letterSpacing: 1.2,
             //     ),
             //   ),
             // ),
             const SizedBox(
-              height: 30,
+              height: 40,
             ),
             SizedBox(
               height: 30,
@@ -187,7 +189,9 @@ class _HomePageState extends State<HomePage> {
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (ctx, index) {
                     return GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed(ChatPage.id);
+                      },
                       child: Container(
                         margin: const EdgeInsets.only(
                           bottom: 40,
