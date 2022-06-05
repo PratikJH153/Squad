@@ -33,7 +33,44 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton.extended(
           tooltip: "Create",
           backgroundColor: kPrimaryColor,
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              backgroundColor: kLightDarkColor,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25),
+                  topRight: Radius.circular(25),
+                ),
+              ),
+              builder: (_) {
+                return Container(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          height: 5,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [],
+                      )
+                    ],
+                  ),
+                );
+              },
+            );
+          },
           label: const Text(
             "Create",
             style: TextStyle(color: Colors.white),
@@ -183,11 +220,43 @@ class _HomePageState extends State<HomePage> {
                 blendMode: BlendMode.dstOut,
                 child: ListView.builder(
                   padding: const EdgeInsets.only(
-                    top: 30,
+                    top: 40,
                     bottom: 100,
                   ),
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (ctx, index) {
+                    if (index == 10) {
+                      return Container(
+                        alignment: Alignment.center,
+                        margin: const EdgeInsets.symmetric(horizontal: 120),
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 5,
+                              spreadRadius: 2,
+                              offset: Offset(0, 4),
+                            )
+                          ],
+                          image: const DecorationImage(
+                            image: AssetImage(
+                              "assets/images/explore.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: const Text(
+                          "Explore More",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      );
+                    }
                     return GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushNamed(ChatPage.id);
@@ -456,7 +525,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   },
-                  itemCount: 10,
+                  itemCount: 11,
                 ),
               ),
             ),

@@ -41,56 +41,58 @@ class ChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: kLightDarkColor,
         floatingActionButton: Container(
-            padding: const EdgeInsets.only(
-              left: 30,
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 1,
-                    ),
-                    decoration: const BoxDecoration(
-                      color: kLightDarkColor,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        bottomLeft: Radius.circular(15),
-                      ),
-                    ),
-                    child: const TextField(
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(
-                          left: 20,
-                        ),
-                        hintText: "Add a message...",
-                        hintStyle: TextStyle(
-                          color: Colors.white38,
-                        ),
-                        border: InputBorder.none,
-                      ),
-                    ),
+          padding: const EdgeInsets.only(
+            left: 30,
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 1,
                   ),
-                ),
-                Container(
                   decoration: const BoxDecoration(
-                    color: kPrimaryColor,
+                    color: kLightDarkColor,
                     borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(15),
-                      bottomRight: Radius.circular(15),
+                      topLeft: Radius.circular(15),
+                      bottomLeft: Radius.circular(15),
                     ),
                   ),
-                  padding: const EdgeInsets.all(15),
-                  child: const Icon(
-                    Icons.send,
-                    size: 20,
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(
+                        left: 20,
+                      ),
+                      hintText: "Add a message...",
+                      hintStyle: TextStyle(
+                        color: Colors.white38,
+                      ),
+                      border: InputBorder.none,
+                    ),
                   ),
                 ),
-              ],
-            )),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(15),
+                    bottomRight: Radius.circular(15),
+                  ),
+                ),
+                padding: const EdgeInsets.all(15),
+                child: const Icon(
+                  Icons.send,
+                  size: 20,
+                ),
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
-          backgroundColor: kDarkColor,
+          backgroundColor: kLightDarkColor,
           elevation: 0,
           centerTitle: true,
           leading: IconButton(
@@ -127,7 +129,14 @@ class ChatPage extends StatelessWidget {
           ),
         ),
         body: Container(
-          margin: const EdgeInsets.only(bottom: 70),
+          decoration: const BoxDecoration(
+            color: kDarkColor,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25),
+              topRight: Radius.circular(25),
+            ),
+          ),
+          margin: EdgeInsets.only(bottom: 70),
           child: ShaderMask(
             shaderCallback: (Rect rect) {
               return const LinearGradient(
@@ -153,8 +162,8 @@ class ChatPage extends StatelessWidget {
               reverse: true,
               padding: const EdgeInsets.only(
                 top: 10,
-                bottom: 40,
                 left: 5,
+                bottom: 120,
                 right: 5,
               ),
               physics: const BouncingScrollPhysics(),
