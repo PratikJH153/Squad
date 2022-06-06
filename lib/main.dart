@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:squadapp/views/chat_page.dart';
-import 'package:squadapp/views/home.dart';
-import 'package:squadapp/widgets/constants.dart';
+import 'package:squadapp/views/screens/chat_page.dart';
+import 'package:squadapp/views/screens/home.dart';
+import 'package:squadapp/views/widgets/constants.dart';
 
 void main() {
   runApp(const MyApp());

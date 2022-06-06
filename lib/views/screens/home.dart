@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:squadapp/views/chat_page.dart';
-import 'package:squadapp/widgets/constants.dart';
+import 'package:squadapp/views/screens/chat_page.dart';
+import 'package:squadapp/views/screens/create_bottom_sheet.dart';
+import 'package:squadapp/views/widgets/constants.dart';
 
 class HomePage extends StatefulWidget {
   static const id = "/home";
@@ -36,7 +37,8 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             showModalBottomSheet(
               context: context,
-              backgroundColor: kLightDarkColor,
+              enableDrag: true,
+              backgroundColor: kDarkColor,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(25),
@@ -44,30 +46,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               builder: (_) {
-                return Container(
-                  padding: EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      Align(
-                        alignment: Alignment.topCenter,
-                        child: Container(
-                          height: 5,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white70,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        children: [],
-                      )
-                    ],
-                  ),
-                );
+                return const CreateBottomSheet();
               },
             );
           },
@@ -225,38 +204,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (ctx, index) {
-                    if (index == 10) {
-                      return Container(
-                        alignment: Alignment.center,
-                        margin: const EdgeInsets.symmetric(horizontal: 120),
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black26,
-                              blurRadius: 5,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            )
-                          ],
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/images/explore.jpg",
-                            ),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        child: const Text(
-                          "Explore More",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                      );
-                    }
                     return GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushNamed(ChatPage.id);
@@ -525,7 +472,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   },
-                  itemCount: 11,
+                  itemCount: 10,
                 ),
               ),
             ),

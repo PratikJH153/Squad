@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:squadapp/models/chat.dart';
-import 'package:squadapp/widgets/constants.dart';
+import 'package:squadapp/logic/models/chat.dart';
+import 'package:squadapp/views/widgets/constants.dart';
 
 class ChatPage extends StatelessWidget {
   static const id = "/chat";
